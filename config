@@ -1,6 +1,6 @@
 set $mod Mod4
 set $term kitty
-set $menu wofi --show run
+set $menu kickoff
 set $laptop eDP-1
 bindswitch lid:on output $laptop disable
 bindswitch lid:off output $laptop enable
@@ -27,7 +27,7 @@ bindsym Ctrl+Print exec ~/.config/sway/grimshot.sh --notify copy area
 bindsym Ctrl+$mod+Print exec ~/.config/sway/grimshot.sh --notify save area
 bindsym Alt+Print exec ~/.config/sway/grimshot.sh --notify copy active
 bindsym Ctrl+Alt+Print exec ~/.config/sway/grimshot.sh --notify save active
-bindsym $mod+Shift+s sleep 1 && systemctl suspend
+bindsym $mod+Shift+s exec sleep 1 && systemctl suspend
 bindsym $mod+l exec swaylock -f -c 000000
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
