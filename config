@@ -13,6 +13,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m "You're trying to say you like GNOME better than me, right?" -b 'Yes, exit sway' 'swaymsg exit'
 exec swayidle -w timeout 750 'swaylock -f -c 000000' timeout 800 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 000000'
+exec gnome-keyring-daemon --start
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym --locked Shift+XF86AudioRaiseVolume exec pactl set-source-volume @DEFAULT_SOURCE@ +5%
